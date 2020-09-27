@@ -1,10 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Stats from './Stats';
+import Stopwatch from './Stopwatch';
 
-const Header = (props) => {
+const Header = ({ players, title }) => {
   return (
     <header>
-      <h1>{props.title}</h1>
-      <span className="stats">Players: {props.totalPlayers}</span>
+      <Stats players={players} />
+      <h1>{title}</h1>
+      <Stopwatch />
     </header>
   );
 }
